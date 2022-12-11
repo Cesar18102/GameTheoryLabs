@@ -37,12 +37,12 @@ namespace GameTheoryLab3
 
         public int[] GetOptimalPlayerSteps(GameInfo gameInfo)
         {
-            return GetOptimalSteps(gameInfo, 0, 1, tile => (tile.YouDrunk - tile.AIDrunk, tile.YourKnowledge - tile.AIKnowledge));
+            return GetOptimalSteps(gameInfo, 0, 1, tile => (tile.YouDrunk, tile.YourKnowledge));
         }
 
         public int[] GetOptimalAISteps(GameInfo gameInfo)
         {
-            return GetOptimalSteps(gameInfo, 1, 0, tile => (tile.AIDrunk - tile.YouDrunk, tile.AIKnowledge - tile.YourKnowledge));
+            return GetOptimalSteps(gameInfo, 1, 0, tile => (tile.AIDrunk, tile.AIKnowledge));
         }
 
         private int[] GetOptimalSteps(GameInfo gameInfo, int strategiesDimension, int resultsDimension, Func<TileInfo, (int drunk, int knowledge)> tileDataAggregator)

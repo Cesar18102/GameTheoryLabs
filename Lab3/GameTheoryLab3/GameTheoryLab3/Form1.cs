@@ -16,6 +16,8 @@ namespace GameTheoryLab3
 
         private (int i, int j)? _prevPlayerStep;
         private (int i, int j)? _prevAiStep;
+
+        private int _step = 0;
         
         private const int GAME_HEIGHT = 4;
         private const int GAME_WIDTH = 4;
@@ -127,6 +129,9 @@ namespace GameTheoryLab3
 
         private void PlayerButton_Click(object sender, EventArgs e)
         {
+            _step++;
+            StepLabel.Text = _step.ToString();
+
             if(_prevPlayerStep.HasValue)
             {
                 _gameMatrix[_prevPlayerStep.Value.i, _prevPlayerStep.Value.j].BorderColor = null;

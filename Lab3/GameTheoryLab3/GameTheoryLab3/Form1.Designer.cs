@@ -65,6 +65,7 @@ namespace GameTheoryLab3
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.ShowHintsCheckBox = new System.Windows.Forms.CheckBox();
+            this.CleverAICheckBox = new System.Windows.Forms.CheckBox();
             this.gameMatrixTile13 = new GameTheoryLab3.GameMatrixTile();
             this.gameMatrixTile14 = new GameTheoryLab3.GameMatrixTile();
             this.gameMatrixTile15 = new GameTheoryLab3.GameMatrixTile();
@@ -81,7 +82,8 @@ namespace GameTheoryLab3
             this.gameMatrixTile3 = new GameTheoryLab3.GameMatrixTile();
             this.gameMatrixTile2 = new GameTheoryLab3.GameMatrixTile();
             this.gameMatrixTile1 = new GameTheoryLab3.GameMatrixTile();
-            this.CleverAICheckBox = new System.Windows.Forms.CheckBox();
+            this.StepLabel = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -129,6 +131,8 @@ namespace GameTheoryLab3
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.StepLabel);
+            this.splitContainer1.Panel1.Controls.Add(this.label20);
             this.splitContainer1.Panel1.Controls.Add(this.CleverAICheckBox);
             this.splitContainer1.Panel1.Controls.Add(this.ShowHintsCheckBox);
             this.splitContainer1.Panel1.Controls.Add(this.AIKnowsYouLabel);
@@ -520,6 +524,16 @@ namespace GameTheoryLab3
             this.ShowHintsCheckBox.UseVisualStyleBackColor = true;
             this.ShowHintsCheckBox.CheckedChanged += new System.EventHandler(this.ShowHintsCheckBox_CheckedChanged);
             // 
+            // CleverAICheckBox
+            // 
+            this.CleverAICheckBox.AutoSize = true;
+            this.CleverAICheckBox.Location = new System.Drawing.Point(182, 102);
+            this.CleverAICheckBox.Name = "CleverAICheckBox";
+            this.CleverAICheckBox.Size = new System.Drawing.Size(69, 17);
+            this.CleverAICheckBox.TabIndex = 32;
+            this.CleverAICheckBox.Text = "Clever AI";
+            this.CleverAICheckBox.UseVisualStyleBackColor = true;
+            // 
             // gameMatrixTile13
             // 
             this.gameMatrixTile13.AIDrunk = 0;
@@ -728,15 +742,23 @@ namespace GameTheoryLab3
             this.gameMatrixTile1.YouDrunk = 0;
             this.gameMatrixTile1.YourKnowledge = 0;
             // 
-            // CleverAICheckBox
+            // StepLabel
             // 
-            this.CleverAICheckBox.AutoSize = true;
-            this.CleverAICheckBox.Location = new System.Drawing.Point(182, 102);
-            this.CleverAICheckBox.Name = "CleverAICheckBox";
-            this.CleverAICheckBox.Size = new System.Drawing.Size(69, 17);
-            this.CleverAICheckBox.TabIndex = 32;
-            this.CleverAICheckBox.Text = "Clever AI";
-            this.CleverAICheckBox.UseVisualStyleBackColor = true;
+            this.StepLabel.AutoSize = true;
+            this.StepLabel.Location = new System.Drawing.Point(138, 68);
+            this.StepLabel.Name = "StepLabel";
+            this.StepLabel.Size = new System.Drawing.Size(13, 13);
+            this.StepLabel.TabIndex = 34;
+            this.StepLabel.Text = "0";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(100, 68);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(32, 13);
+            this.label20.TabIndex = 33;
+            this.label20.Text = "Step:";
             // 
             // Form1
             // 
@@ -819,6 +841,8 @@ namespace GameTheoryLab3
         private GameMatrixTile gameMatrixTile2;
         private System.Windows.Forms.CheckBox ShowHintsCheckBox;
         private System.Windows.Forms.CheckBox CleverAICheckBox;
+        private System.Windows.Forms.Label StepLabel;
+        private System.Windows.Forms.Label label20;
     }
 }
 
